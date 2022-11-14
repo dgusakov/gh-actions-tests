@@ -1,8 +1,8 @@
 on:
   push:
-    tags:
-      # Don't re-run on bot pushing new tags for releases
-      - '!**'
+    # tags:
+    #   # Don't re-run on bot pushing new tags for releases
+    #   - '!**'
     paths-ignore:
       # Ignoring package version increase, dependencies change package lock
       - 'package.json'
@@ -19,4 +19,3 @@ jobs:
       - name: Do nothing
         run: |
           echo "Nothing"
-          
