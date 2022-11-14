@@ -1,6 +1,6 @@
 on:
   push:
-    tags-ignore:
+    branches:
       # Don't re-run on bot pushing new tags for releases
       - "**"
     paths-ignore:
