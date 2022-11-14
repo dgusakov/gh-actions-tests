@@ -3,12 +3,10 @@ on:
     tags-ignore:
       # Don't re-run on bot pushing new tags for releases
       - "**"
-    # paths-ignore:
-    #   # Ignoring package version increase, dependencies change package lock
-    #   - "package.json"
-    #   - "CHANGELOG.md"
-  pull_request:
-    types: [opened, reopened, synchronize]
+    paths-ignore:
+      # Ignoring package version increase, dependencies change package lock
+      - "package.json"
+      - "CHANGELOG.md"
 
 jobs:
   trigger-test:
