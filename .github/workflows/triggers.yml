@@ -1,12 +1,12 @@
 on:
   push:
-    # tags-ignore:
-    #   # Don't re-run on bot pushing new tags for releases
-    #   - "**"
-    paths-ignore:
-      # Ignoring package version increase, dependencies change package lock
-      - "package.json"
-      - "CHANGELOG.md"
+    tags-ignore:
+      # Don't re-run on bot pushing new tags for releases
+      - "**"
+    # paths-ignore:
+    #   # Ignoring package version increase, dependencies change package lock
+    #   - "package.json"
+    #   - "CHANGELOG.md"
   pull_request:
     types: [opened, reopened, synchronize]
 
